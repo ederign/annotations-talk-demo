@@ -1,4 +1,4 @@
-package me.ederign.cola.old;
+package me.ederign.processor;
 
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.type.DeclaredType;

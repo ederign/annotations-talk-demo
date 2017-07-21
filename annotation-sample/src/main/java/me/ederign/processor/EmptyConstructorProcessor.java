@@ -1,4 +1,4 @@
-package me.ederign.cola.old;
+package me.ederign.processor;
 
 import java.util.List;
 import java.util.Set;
@@ -54,7 +54,7 @@ public class EmptyConstructorProcessor extends AbstractProcessor {
                                                           entityType.getType());
         processingEnv.getMessager().printMessage(
                 Diagnostic.Kind.ERROR,
-                "missing no argument constructor",
+                "sem construtor default",
                 typeElement,
                 entityAnnotation);
     }

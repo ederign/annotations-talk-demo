@@ -1,4 +1,4 @@
-package me.ederign.cola.old;
+package me.ederign.processor;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,17 +10,20 @@ import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 
-//@SupportedAnnotationTypes({"me.ederign.cola.old.HelloWorld"})
-public class HelloWorldProcessor extends AbstractProcessor {
+//@SupportedAnnotationTypes({"me.ederign.processor.PrintMe"})
+public class PrintMeProcessor extends AbstractProcessor {
 
     public boolean process(Set<? extends TypeElement> annotations,
                            RoundEnvironment env) {
         Messager messager = processingEnv.getMessager();
+
         for (TypeElement te : annotations) {
+
             for (Element e : env.getElementsAnnotatedWith(te)) {
                 messager.printMessage(Diagnostic.Kind.WARNING,
                                       "Printing: " + e.toString());
             }
+
         }
 
         return true;
@@ -29,7 +32,7 @@ public class HelloWorldProcessor extends AbstractProcessor {
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         return new HashSet<String>() {{
-            add(HelloWorld.class.getCanonicalName());
+            add(PrintMe.class.getCanonicalName());
         }};
     }
 

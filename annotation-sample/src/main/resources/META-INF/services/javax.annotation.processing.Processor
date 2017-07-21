@@ -1,2 +1,1 @@
-me.ederign.cola.old.HelloWorldProcessor
-me.ederign.cola.old.EmptyConstructorProcessor
+me.ederign.processor.PrintMeProcessor
