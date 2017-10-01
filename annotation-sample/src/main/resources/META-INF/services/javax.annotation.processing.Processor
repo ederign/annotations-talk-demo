@@ -1,1 +1,2 @@
 me.ederign.processor.PrintMeProcessor
+me.ederign.processor.EmptyConstructorProcessor

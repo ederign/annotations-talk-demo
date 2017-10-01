@@ -18,6 +18,7 @@ import javax.lang.model.util.ElementFilter;
 import javax.lang.model.util.Types;
 import javax.tools.Diagnostic;
 
+//REMINDER: javax.annotation.processing.Processor
 @SupportedAnnotationTypes({"javax.persistence.Entity"})
 public class EmptyConstructorProcessor extends AbstractProcessor {
 
