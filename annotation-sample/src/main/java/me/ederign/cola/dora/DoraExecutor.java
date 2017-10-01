@@ -3,6 +3,8 @@ package me.ederign.cola.dora;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import me.ederign.jdora.JDoraTest;
+
 public class DoraExecutor {
 
     private int success = 0;
@@ -32,25 +34,25 @@ public class DoraExecutor {
 
         Object testObject = testClass.newInstance();
         for (Method method : testObject.getClass().getDeclaredMethods()) {
-            if (method.getAnnotation(DoraTest.class) != null) {
+            if (method.getAnnotation(JDoraTest.class) != null) {
 
-                DoraTest annotation = method.getAnnotation(DoraTest.class);
+                JDoraTest annotation = method.getAnnotation(JDoraTest.class);
 
-                if (annotation.expected() == Object.class) {
-                    executeTest(testObject,
-                                method);
-                } else {
-                    executeWithExpectedException(testObject,
-                                                 method,
-                                                 annotation);
-                }
+//                if (annotation.expected() == Object.class) {
+//                    executeTest(testObject,
+//                                method);
+//                } else {
+//                    executeWithExpectedException(testObject,
+//                                                 method,
+//                                                 annotation);
+//                }
             }
         }
     }
 
     private void executeWithExpectedException(Object testObject,
                                               Method method,
-                                              DoraTest annotation) {
+                                              JDoraTest annotation) {
         try {
             method.invoke(testObject);
             error(method);

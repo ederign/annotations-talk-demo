@@ -1,39 +1,39 @@
 package me.ederign.jdora;
 
-import me.ederign.cola.dora.DoraTest;
-import me.ederign.cola.dora.DoraTestUtils;
-
 public class JDoraSampleTest {
 
-    @DoraTest
+    @JDoraTest
     public void testSuccess() {
         //success
+        System.out.println("YAY!");
     }
 
-//    @DoraTest
+    public void noAnnotation() {
+        System.out.println("error!");
+    }
+
+    //    @JDoraTest
 //    public void testError() {
 //        error
 //    }
-    
-//    public void noAnnotation() {
-//    }
+
 //
-//    @DoraTest(expected = RuntimeException.class)
+//    @JDoraTest(expected = RuntimeException.class)
 //    public void testExpected() {
 //        throw new RuntimeException();
 //    }
 //
-//    @DoraTest(expected = RuntimeException.class)
+//    @JDoraTest(expected = RuntimeException.class)
 //    public void testErrorExpected() {
 //    }
 //
-//    @DoraTest
+//    @JDoraTest
 //    public void assertTestError() {
 //        DoraTestUtils.assertEquals(1,
 //                                   2);
 //    }
 //
-//    @DoraTest
+//    @JDoraTest
 //    public void assertTestSuccess() {
 //        DoraTestUtils.assertEquals(2,
 //                                   2);

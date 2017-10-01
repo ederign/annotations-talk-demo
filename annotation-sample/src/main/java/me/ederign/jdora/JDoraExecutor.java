@@ -10,17 +10,19 @@ public class JDoraExecutor {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         try {
             JDoraExecutor JDoraExecutor = new JDoraExecutor();
-            JDoraExecutor.execute("me.ederign.jdora.JDoraSampleTest");
-            JDoraExecutor.results();
+            String fqcn = "me.ederign.jdora.JDoraSampleTest";
+            JDoraExecutor.execute(fqcn);
+            JDoraExecutor.results(fqcn);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void results() {
-        System.out.println("Test executed");
-        System.out.println("su " + success);
-        System.out.println("err " + error);
+    private void results(String fqcn) {
+        System.out.println("====================================================");
+        System.out.println("Test results for: " + fqcn);
+//        System.out.println("su " + success);
+//        System.out.println("err " + error);
     }
 
     private void execute(String fqcn) throws ClassNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException {

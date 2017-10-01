@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface JDoraTest {
 
-    Class<?> expected() default Object.class;
+//    Class<?> expected() default Object.class;
 }
