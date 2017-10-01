@@ -10,6 +10,11 @@ public class JDoraSampleTest {
         //success
     }
 
+//    @DoraTest
+//    public void testError() {
+//        error
+//    }
+    
 //    public void noAnnotation() {
 //    }
 //
